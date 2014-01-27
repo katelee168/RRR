@@ -1,0 +1,56 @@
+<html>
+<head>
+	<script>
+		var monthtext=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
+
+		function populatedropdown(dayfield, monthfield, yearfield){
+		var today=new Date()
+		var dayfield=document.getElementById(dayfield)
+		var monthfield=document.getElementById(monthfield)
+		var yearfield=document.getElementById(yearfield)
+		for (var i=0; i<31; i++)
+		dayfield.options[i]=new Option(i, i+1)
+		dayfield.options[today.getDate()]=new Option(today.getDate(), today.getDate(), true, true) //select today's day
+		for (var m=0; m<12; m++)
+		monthfield.options[m]=new Option(monthtext[m], monthtext[m])
+		monthfield.options[today.getMonth()]=new Option(monthtext[today.getMonth()], monthtext[today.getMonth()], true, true) //select today's month
+		var thisyear=today.getFullYear()
+		for (var y=0; y<20; y++){
+		yearfield.options[y]=new Option(thisyear, thisyear)
+		thisyear+=1
+		}
+		yearfield.options[0]=new Option(today.getFullYear(), today.getFullYear(), true, true) //select today's year
+		}
+
+		var states = ['AL','AK','AZ','AR','CA','CO','CT','DE','DC','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','MD','MA','MI','MN','MS','MO','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY'];
+
+		function statedropdown(state) {
+			var state = document.getElementById(state)
+			for (var i = 0; i < 50; i++)
+				state.options[i] = new Option(states[i], states[i])
+		}
+	</script>
+</head>
+<body>
+	<h1>Teacher Information</h1>
+	<form>
+		Teacher Code: <input type = "text" name = "teacher_code"><br>
+		Teacher Name: <input type = "text" name = "teacher_name"><br>
+		Date Joined: <select id = "month"></select>
+		<select id = "day"></select>
+		<select id = "year"></select><br>
+
+		<h1>School Information</h1>
+		School Code: <input type = "text" name = "school_code"><br>
+		School Name: <input type = "text" name = "school_name"><br>
+		Town: <input type = "text" name = "town"><br>
+		State: <select id = "state"></select>
+	</form>
+	<script>
+		window.onload = function() {
+			populatedropdown("day","month","year")
+			statedropdown("state")
+		}
+	</script>
+</body>
+</html>
