@@ -20,6 +20,8 @@ sequelize
 
 var Recorder = sequelize.define('Recorder', {
 	recorder_code: 		{ type: Sequelize.INTEGER, 
+							autoIncrement: true,
+							primaryKey: true,
 						  notNull: true },
 
 	recorder_lastname: 	{ type: Sequelize.STRING,
@@ -31,27 +33,66 @@ var Recorder = sequelize.define('Recorder', {
 						  notEmpty: true },
 
 	recorder_email: 	{ type: Sequelize.STRING,
-						  isEmail: true }	
+							unique: true,
+							validate: {
+								isEmail: {
+									msg: "Email address must be valid"
+								}
+							}
+						},	
+						  
+	recorder_pass:		{ type: Sequalize.STRING,
+						  validate: {
+							len:{
+								args: [6, 128];
+								msg: "Password must have at least six characters"
+							}
+						  }
+					  },
+						  
+	admin_code: 		{ type: Sequalize.INTEGER,
+						  notNull: true}
 })
 
 var Admin = sequelize.define('Admin', {
-	admin_code: 		{ type: Sequelize.INTEGER,
+	admin_code: 		{ type: Sequelize.INTEGER, 
+							autoIncrement: true,
+							primaryKey: true,
 						  notNull: true },
 
 	admin_lastname: 	{ type: Sequelize.STRING,
 						  notNull: true,
 						  notEmpty: true },
 
-	admin_firstname: 	{ type: Sequelize.STRING,
+	admin_firstname: { type: Sequelize.STRING,
 						  notNull: true,
 						  notEmpty: true },
 
+	admin_email: 	{ type: Sequelize.STRING,
+							unique: true,
+							validate: {
+								isEmail: {
+									msg: "Email address must be valid"
+								}
+							}
+						},	
+						  
+	admin_pass:		{ type: Sequalize.STRING,
+						  validate: {
+							len:{
+								args: [6, 128];
+								msg: "Password must have at least six characters"
+							}
+						  }
+					  },
+						  
 	admin_schoolcode: 	{ type: Sequelize.INTEGER,
 						  notNull: true }
 })
-
 var Student = sequelize.define('Student', {
 	student_code: 		{ type: Sequelize.INTEGER,
+							autoIncrement: true,
+							primaryKey: true,
 						  notNull: true },
 
 	student_lastname: 	{ type: Sequelize.STRING,
@@ -69,6 +110,9 @@ var Student = sequelize.define('Student', {
 						  notNull: true },
 
 	student_booksread: 	{ type: Sequelize.INTEGER,
+						  notNull: true },
+						  
+	teacher_code:		{ type: Sequelize.INTEGER,
 						  notNull: true }
 })
 
@@ -83,6 +127,8 @@ var State = sequelize.define('State', {
 
 var Teacher = sequelize.define('Teacher', {
 	teacher_code: 		{ type: Sequelize.INTEGER,
+						  autoIncrement: true,
+						  primaryKey: true,
 						  notNull: true },
 
 	teacher_firstname: 	{ type: Sequelize.STRING,
@@ -92,12 +138,32 @@ var Teacher = sequelize.define('Teacher', {
 	teacher_lastname: 	{ type: Sequelize.STRING,
 						  notNull: true,
 						  notEmpty: true },
-
-	teacher_datejoined: Sequelize.DATE
+						  
+	teacher_datejoined: Sequelize.DATE,
+	
+	teacher_email: 	{ type: Sequelize.STRING,
+							unique: true,
+							validate: {
+								isEmail: {
+									msg: "Email address must be valid"
+								}
+							}
+						},	
+						  
+	teacher_pass:		{ type: Sequalize.STRING,
+						  validate: {
+							len:{
+								args: [6, 128];
+								msg: "Password must have at least six characters"
+							}
+						  }
+					  },
 })
 
 var School = sequelize.define('School', {
 	school_code: 		{ type: Sequelize.INTEGER,
+						  autoIncrement: true,
+						  primaryKey: true,
 						  notNull: true },
 
 	school_name: 		{ type: Sequelize.STRING,
@@ -164,18 +230,25 @@ var Footnote = sequelize.define('Footnote', {
 
 Admin.hasMany(Recorder, { foreignKey: 'recorder_code' })
 Recorder.belongsTo(Admin)
+
 Recorder.hasMany(Book, { foreignKey: 'book_code' })
 Book.belongsTo(Recorder)
+
 Teacher.hasMany(Student, { foreignKey: 'student_code' })
 Student.belongsTo(Teacher)
+
 School.hasMany(Teacher, { foreignKey: 'teacher_code' })
 Teacher.belongsTo(School)
+
 State.hasMany(School, { foreignKey: 'school_code' })
 School.belongsTo(State)
+
 Book.hasOne(Event, { foreignKey: 'event_code' })
-Event.belongsTo(Book)
+Event.belongsTo(Book
+
 Book.hasOne(Footnote, { foreignKey: 'footnote_code' })
 Footnote.belongsTo(Book)
+
 School.hasMany(Event, { foreignKey: 'event_code' })
 Event.belongsTo(School)
 
