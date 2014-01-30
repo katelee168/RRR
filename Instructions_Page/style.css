@@ -2,6 +2,7 @@
 	text-align:center;
 	font: 77.5% "TheSerif SemiBold";
 	padding: 2px 0px 0px 0px;
+	color: rgb(39, 170, 225);
 }
 
 .info {
@@ -18,5 +19,5 @@
 	display: inline-block;
 	font: 119.5% "TheSerif SemiBold";
 	border-radius: 50px;
-	border: 1px solid #000;;
+	border: 1px solid #000;
 }

@@ -1,0 +1,55 @@
+.header {
+	text-align:center;
+	font: 77.5% "TheSerif SemiBold";
+	padding: 2px 0px 0px 0px;
+	color: rgb(39, 170, 225);
+}
+
+.container {
+	width: 1300px;
+	padding-top: 25px;
+}
+
+.menu {
+	height:800px;
+	width:400px;
+	float:left;
+	overflow:scroll;
+	font: 159.5% "TheSerif SemiBold";
+}
+
+.menu ul {
+	font: 70% "TheSerif SemiBold";
+}
+
+.selected {
+	height:230px;
+	width:300px;
+	float:left;
+	font: 219.5% "TheSerif SemiBold";
+	padding: 0px 0px 30px 30px;
+}
+
+.about {
+	height:230px;
+	width:540px;
+	float:left;
+	font: 129.5% "TheSerif SemiBold";
+}
+
+.recordtime {
+	
+	height:650px;
+	width:750px;
+	padding-left: 150px;
+	float:left;
+}
+
+.recordtime button {	
+	width: 200px;
+	height: 70px;
+	font: 119.5% "TheSerif SemiBold";
+	border-radius: 50px;
+	border: 1px solid #000;
+	background-color: rgb(39, 170, 225);
+}
