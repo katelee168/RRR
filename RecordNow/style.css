@@ -1,0 +1,48 @@
+.header {
+	text-align:center;
+	font: 77.5% "TheSerif SemiBold";
+	padding: 2px 0px 0px 0px;
+	color: rgb(39, 170, 225);
+}
+
+.info {
+	font: 97.5% "TheSerif SemiBold";
+	padding: 0px 300px 0px 300px;
+}
+.record{
+	text-align: center;
+}
+.record button{
+	width: 110px;
+	height: 45px;
+	font: 129.5% "TheSerif SemiBold";
+	float: left;
+	margin-right: 50px;
+	margin-left: 425px;
+	border: 1px solid #000;
+	background-color: red;
+	color: white;
+}
+.pause{
+	text-align: center;
+}
+.pause button{
+	width: 110px;
+	height: 45px;
+	font: 129.5% "TheSerif SemiBold";
+	float: left;
+	margin-right: 50px;
+	background-color: yellow;
+	border: 1px solid #000;
+}
+.startover{
+	text-align: center;
+}
+.startover button{
+	width: 110px;
+	height: 45px;
+	float:left;
+	font: 129.5% "TheSerif SemiBold";
+	border: 1px solid #000;
+}
+
