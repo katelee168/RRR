@@ -2,11 +2,10 @@
 <html>
 <head>
         <link href='http://fonts.googleapis.com/css?family=Duru+Sans' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Finger+Paint' rel='stylesheet' type='text/css'>
         <meta charset = "utf-8">
         <meta name="A non-profit that aims to spread literacy and compassion by connecting communities through the power of storytelling." content = "Read Record Replay">
         <title>Read Record Replay</title>
-        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <link href="styleSIGNUP.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
         <div class = "header">
@@ -26,21 +25,36 @@
                 </div>
         </div>
 
-        <div id = "main">
-                <table>
-                        <tr>
-                                <th width = 50%> 
-                                        Connecting communities through the power of storytelling.
-                                </th>
-                                <th>
-                                        <form id="login">
-                                                Login:<br>
-                                                <input type="text" name="username" /><br>
-                                                <input type="password" name="password" />
-                                        </form>
-                                </th>
-                        </tr>
-                </table>
+        <div id="main">
+			<form name="input" action="html_form_action.asp" method="get">
+				<table>
+					<tr>
+						<td>First name:</td>
+						<td><input type="text" name = "firstR" placeholder = "  first name"/></td>
+					</tr>
+					<tr>
+						<td>Last name:</td>
+						<td><input type="text" name = "lastR" placeholder = "  last name"/></td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><input type="text" name = "emailR" /></td>
+					</tr>
+					<tr>
+						<td>Create a password:</td>
+						<td><input type="password" password = "pwdR"/></td>
+					</tr>
+					</tr>
+						<td>Select an admin:</td>
+						<td><select> <!--pull admin information and put it here-->
+								<option></option>
+								<option>Coffee</option>
+								<option>Tea</option>
+							</select>
+						</td>
+				</table>
+				<input type="submit" value="Submit" id = "submit">
+			</form>
         </div>
 </body>
 </html>
