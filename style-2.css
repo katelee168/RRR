@@ -219,6 +219,18 @@ ul#block1 li#block1-right h2 a:hover{
 	-moz-border-radius: 10px;
 }
 
+input[type=text]{
+	font-size: 12px;
+	font-family: 'HelveticaNeue-UltraLight', Helvetica, sans-serif;
+	font-weight: 200;
+}
+
+input[type=password]{
+	font-size: 12px;
+	font-family: 'HelveticaNeue-UltraLight', Helvetica, sans-serif;
+	font-weight: 200;	
+}
+
 #sub {
 	background: rgb(39, 170, 225);
 	height: 40px;
@@ -267,6 +279,7 @@ ul#block1 li#block1-right h2 a:hover{
 	padding-left: 3%;
 	padding-right: 3%;
 	vertical-align: text-top;
+	/* background-color: #efeedd; */
 }
 
 #block2 ul li h2{

@@ -3,42 +3,7 @@
 	<title>Recorder</title>
 	<link rel='stylesheet' type='text/css' href='style.css'/>
 </head>
-<body><!--
-	<div class = "header">
-		<h1>Recorder</h1>
-	</div>
-
-	<div class="container">
-
-	<div class="menu">
-		<form>
-			<ul>
-			<input type="checkbox">        Not Recorded
-			</ul>
-		</form>
-	This is a list of all recorded and not recorded books in a scrollbar
-	</div>
-
-	<div class="selected">
-	Giant picture of selected book
-	</div>
-
-	<div class="about">
-		Book Title: <br>
-		Author: <br>
-		ISBN: <br>
-		Recording Event Code: <br>
-		Pages: <br>
-		Age level: <br>
-		Grade level: <br>
-	</div><br>
-
-	<form id="recordtime">
-		<button type="recording">Record Now</button>
-	</form>
-
-	</div>
--->
+<body>
 	<!-- HEADER -->
 	<div class = "header">
 		<img id = "logo" height="50" src="ReadRecordReplay_Banner.png"/>
@@ -60,26 +25,18 @@
 	<div class = "title">
 		Recorder
 	</div>
-
-	<ul id = "column-container">
-		<li>Select a book: <br>
-			<select size="10" MULTIPLE>
-				<option selected>A</option>
-				<option selected>B</option>
-				<option selected>C</option>
-				<option selected>D</option>
-				<option selected>E</option>
-				<option selected>F</option>
-				<option selected>G</option>
-				<option selected>H</option>
-				<option selected>I</option>
-				<option selected>J</option>
-				<option selected>K</option>
-				<option selected>L</option>
-				<option selected>M</option>
-				<option selected>N</option>
-			</select>
-		</li>
-	</ul>
+	<table id = "recorder">
+		<tr>
+			<td width="15%" id = "left" style="vertical-align: middle">
+				<img src="Stop.png" onmouseover="this.src='Stop-hover.png';" onmouseout="this.src='Stop.png';" />
+			</td>
+			<td width="15%" id = "center" style="vertical-align: middle">
+				<img src="Record.png" width = 100% onmouseover="this.src='Record-hover.png';" onmouseout="this.src='Record.png';"/>
+			</td>
+			<td width="15%" id = "right" style="vertical-align: middle">
+				<img src="placeholder.png" />
+			</td>
+		</tr>
+	</table>
 </body>
 </html>

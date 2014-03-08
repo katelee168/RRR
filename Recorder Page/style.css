@@ -137,32 +137,28 @@ box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3);
 	font-size: 50px;
 }
 
-#column-container {
-	z-index: -1;
+#recorder {
 	width: 100%;
-	float: center;
 }
 
-#column-container li {
-	display: inline-block;
-	float: center;
-	width: 30%;
-	font-family: 'HelveticaNeue-UltraLight', Helvetica, sans-serif;
-	font-weight: 100;
-	font-size: 25px;
-	color: rgb(39, 170, 225);
+table#recorder tr td {
+	background-color: rgb(255,0,0);
 }
 
-#column-container li select {
-	margin-top: 20px;
-	width: 80%;
-	background-color: rgb(39, 170, 225);
-	color: #ffffff;
-	opacity: 0.8;
-	font-family: 'HelveticaNeue-UltraLight', Helvetica, sans-serif;
-	font-weight: 100;
-	font-size: 15px;
-	border-radius: 5px;
+#left {
+	text-align: right;
+	padding-right: 20px;
+}
+
+#right {
+	text-align: left;
+	padding-left: 20px;
+}
+
+#center {
+	text-align: center;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 /* .container {
