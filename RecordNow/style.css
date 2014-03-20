@@ -3,9 +3,6 @@ body{
 }
 
 .header{
-	border: #acacac;
-	border-width: 5px;
-	border-bottom-style: solid;
 	opacity: 0.85;
 	position: fixed;
 	top: 0px;
