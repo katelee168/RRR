@@ -1,9 +1,8 @@
 body{
-	/*background-color: #efeedd;*/
 	background-color: #fffff5;
+	height: 500px;
 }
 
-/* Navigation Bar */
 .header{
 	opacity: 0.85;
 	position: fixed;
@@ -125,106 +124,38 @@ background: #000000;
 box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3); 
 }
 
-/* Events Banner */
-#events-banner {
-	position: relative;
-	margin-top: 70px;
-	height: 400px;
-	margin-left: -10px;
-	margin-right: -10px;
-	background-image: url("letters-falling.jpg");
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	z-index: -2;
+.title {
+	text-align: center;
+	padding: 2px 0px 0px 0px;
+	color: rgb(39, 170, 225);
+	z-index: -1;
+	margin-top: 100px;
 	font-family: 'HelveticaNeue-UltraLight', Helvetica, sans-serif;
-	font-size: 72px;
-	font-weight: 200;
+	font-weight: 100;
+	font-size: 50px;
+}
+
+.button{
+	text-align: center;
+}
+
+.button button{
+	background: rgb(39, 170, 225);
+	padding: 10px 10px 10px 10px;
+	height: 40px;
+	font-size: 20px;
+	font-family: 'HelveticaNeue-UltraLight', Helvetica, sans-serif;
 	color: #ffffff;
-	line-height: 400px;
-	text-align: center;
-}
-
-/* Stripe Banner */
-#stripe-container {
-	width: 100%;
-	text-align: center;
-	background-color: none;
-}
-
-#button1{
-	background-color: rgb(39, 170, 225);
-	width: 170px;
-	margin-top: -26px;
-	height: 50px;
-	float: center;
-	text-align: center;
-	font-family: 'HelveticaNeue-UltraLight', Helvetica, sans-serif;
-	font-size: 25px;
-	font-weight: 200;
 	border-radius: 10px;
 	-moz-border-radius: 10px;
-	line-height: 50px;
-	color: black;
-	z-index: -1;
-	transition: background-color 0.3s ease;
-	-webkit-transition: background-color 0.3s ease;
-	-moz-transition: background-color 0.3s ease;
-	transition: color 0.3s ease;
-	-webkit-transition: color 0.3s ease;
-	-moz-transition: color 0.3s ease;
+	border-style: solid;
+	border-color: #000000;
+	border-width: 0px;
+	font-weight: 100;
 }
 
-#button1:hover {
-	background-color: #0d3b4e;
-	color: white;
-	z-index: -1;
-}
-
-#stripe {
-	position: relative;
-	height: 7px;
-	background-color: rgb(39, 170, 225);
-	margin-left: -10px;
-	margin-right: -10px;
-	z-index: -2;
-	margin-top: -25px;
-}
-
-/* List of Events */
-#list-events {
-	margin-left: 10%;
-	margin-top: 50px;
-	margin-right: 10%;
-}
-
-#list-events h1 {
-	font-weight: 200;
-	font-family: 'HelveticaNeue-UltraLight', Helvetica, sans-serif;
-	font-size: 40px;
-}
-
-.odd-row {
-	background-color: rgb(39, 170, 225);
-	height: 50px;
-}
-
-.even-row {
-	background-color: #878281;
-	height: 50px;
-}
-
-#list-events table {
-	font-weight: 200;
-	font-family: 'HelveticaNeue-UltraLight', Helvetica, sans-serif;
-	font-size: 20px;
-	color: white;
-	border-spacing: 0px;
-}
-
-#list-events table td {
-	padding-left: 15px;
+.button button:hover {
+	opacity: 0.7;
 }
 
 /* Footer */
@@ -236,8 +167,8 @@ footer {
 	font-family: 'HelveticaNeue-UltraLight', Helvetica, sans-serif;
 	padding-bottom: 10px;
 	padding-top: 20px;
+	top: 50px;
 	position: relative;
-	top: 300px;
 	z-index: -1;
 }
 
@@ -253,6 +184,7 @@ footer td {
 	text-align: left;
 	padding-left: 25px;
 	width: 30%;
+	color: white;
 }
 
 #address { font-size: 25px; }

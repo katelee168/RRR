@@ -128,7 +128,7 @@ box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3);
 
 ul#block1{
 	/*background: rgb(39, 170, 225);*/
-	background-image: url("books-2.jpg");
+	background-image: url("../img/books-2.jpg");
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;

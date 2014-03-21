@@ -1,14 +1,7 @@
-<!DOCTYPE html>
 <html>
 <head>
-	<link href='http://fonts.googleapis.com/css?family=Duru+Sans' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Finger+Paint' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-	<meta charset = "utf-8">
-	<meta name="A non-profit that aims to spread literacy and compassion by connecting communities through the power of storytelling." content = "Read Record Replay">
-	<title>Read Record Replay</title>
-	<link href="css/style-2.css" rel="stylesheet" type="text/css"/>
+	<title>Recorder</title>
+	<link rel='stylesheet' type='text/css' href='css/record.css'/>
 </head>
 <body>
 	<!-- HEADER -->
@@ -28,42 +21,26 @@
 			</ul>
 		</div>
 	</div>
-
-	<!-- BLOCK 1 -->
-	<div id="block1holder"><ul id = "block1">
-		<li id = "block1-left">
-			Connecting communities through the power of storytelling.
-		</li>
-		<li id = "block1-right">
-			<br><br><h1>Start Recording</h1>
-			<form action = "signup.html">
-				<input type="text" name="name" placeholder = "  Name" id="name" autofocus><br><br>
-				<input type="text" name="event-code" placeholder="  Event Code" id="event-code"><br><br>
-				<input type="submit" name="submit" id="sub">
-			</form>
-		</li>
-	</ul></div>
-
-	<!-- BLOCK 2 -->
-		<div id = "block2">
-			<ul>
-				<li>
-					<h2>Read</h2>
-					<img src="img/glasses.png" width = "50%"/>
-					<p>We collect picture book donations for donation to elementary schools.</p>
-				</li>
-				<li>
-					<h2>Record</h2>
-					<img src="img/microphone.png" width = "50%" />
-					<p>At each of our events, volunteers read and record the books, storing them in our database.</p>
-				</li>
-				<li>
-					<h2>Replay</h2>
-					<img src="img/play.png" width = "50%" />
-					<p>Now students and teachers can access audiobooks through our website.</p>
-				</li>
-			</ul>
-		</div>
+	<!-- TITLE -->
+	<div class = "title">
+		Recorder
+	</div>
+	<table id = "recorder">
+		<tr>
+			<td width="15%" id = "left" style="vertical-align: middle">
+				<img src="img/Stop.png" onmouseover="this.src='img/Stop-hover.png';" onmouseout="this.src='img/Stop.png';" />
+			</td>
+			<td width="15%" id = "center" style="vertical-align: middle">
+				<img src="img/Record.png" width = 100% onmouseover="this.src='img/Record-hover.png';" onmouseout="this.src='img/Record.png';"/>
+			</td>
+			<td width="15%" id = "right" style="vertical-align: middle">
+				<img src="img/page-flip.png" width = 40% onmouseover="this.src='img/page-flip-hover.png';" onmouseout="this.src='img/page-flip.png';"/>
+			</td>
+		</tr>
+	</table>
+	<form>
+		<center><input type="submit" name="submit" id="sub"></center>
+	</form>
 </body>
 
 <!-- FOOTER -->

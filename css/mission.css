@@ -1,7 +1,9 @@
 body{
 	background-color: #fffff5;
+	height: 400px;
 }
 
+/* Navigation Bar */
 .header{
 	opacity: 0.85;
 	position: fixed;
@@ -123,43 +125,82 @@ background: #000000;
 box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3); 
 }
 
-.title {
-	text-align:center;
-	padding: 2px 0px 0px 0px;
-	color: rgb(39, 170, 225);
+/* Banner */
+#banner {
+	height: 800px;
+	position: relative;
+	margin-top: 70px;
 	z-index: -1;
-	margin-top: 100px;
-	font-family: 'HelveticaNeue-UltraLight', Helvetica, sans-serif;
-	font-weight: 100;
-	font-size: 50px;
-}
-
-.info {
-	padding: 0px 00px 0px 300px;
-	font-size: 16px;
-	font-family: 'HelveticaNeue-UltraLight', Helvetica, sans-serif;
-	font-weight: 100;
-	width: 40%;
-	float: center;
-}
-.button{
+	background-image: url("../img/mission-overlaid.jpg");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin-left: -10px;
+	margin-right: -10px;
 	text-align: center;
 }
-.button button{
-	background: rgb(39, 170, 225);
-	padding: 10px 10px 10px 10px;
-	height: 40px;
-	font-size: 20px;
+
+#banner h1 {
+	font-weight: 200;
 	font-family: 'HelveticaNeue-UltraLight', Helvetica, sans-serif;
-	color: #ffffff;
-	border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-style: solid;
-	border-color: #000000;
-	border-width: 0px;
-	font-weight: 100;
+	font-size: 100px;
+	color: white;
+}
+#banner p{
+	font-weight: 200;
+	font-family: 'HelveticaNeue-UltraLight', Helvetica, sans-serif;
+	font-size: 24px;
+	color: white;
+	margin-left: 200px;
+	margin-right: 200px;
+	line-height: 40px;
 }
 
-.button button:hover {
-	opacity: 0.7;
+/* Footer */
+footer {
+	height: 130px;
+	width: 102%;
+	color: #ffffff;
+	background: rgb(39, 170, 225);
+	font-family: 'HelveticaNeue-UltraLight', Helvetica, sans-serif;
+	padding-bottom: 10px;
+	padding-top: 20px;
+	position: relative;
+	margin-left: -10px;
+	margin-right: -10px;
+	z-index: -1;
+}
+
+footer a {
+	color: #ffffff;
+}
+
+footer td {
+	background: none;
+}
+
+#footer-left {
+	text-align: left;
+	padding-left: 25px;
+	width: 30%;
+}
+
+#address { font-size: 25px; }
+#copyright { font-size: 15px; }
+
+#footer-center {
+	text-align: center;
+	width: 30%;
+}
+
+#footer-right {
+	text-align: right;
+	padding-right: 25px;
+	width: 30%;
+	font-size: 20px;
+}
+
+#footer-right table {
+	float: right;
 }

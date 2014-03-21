@@ -1,9 +1,9 @@
-/* Navigation Bar */
 body{
 	/*background-color: #efeedd;*/
 	background-color: #fffff5;
 }
 
+/* Navigation Bar */
 .header{
 	opacity: 0.85;
 	position: fixed;
@@ -125,29 +125,18 @@ background: #000000;
 box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3); 
 }
 
-/* Banner */
-#banner-background {
-	position: fixed;
-	/* margin-top: 70px; */
-	margin-top: 60px;
+/* Events Banner */
+#events-banner {
+	position: relative;
+	margin-top: 70px;
 	height: 400px;
 	margin-left: -10px;
 	margin-right: -10px;
-	width: 100%;
-	background-image: url("pen-and-book.jpg");
+	background-image: url("../img/letters-falling.jpg");
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	z-index: -3;
-}
-
-#banner {
-	position: relative;
-	height: 400px;
-	margin-left: -10px;
-	margin-right: -10px;
-	background: none;
 	z-index: -2;
 	font-family: 'HelveticaNeue-UltraLight', Helvetica, sans-serif;
 	font-size: 72px;
@@ -157,96 +146,85 @@ box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3);
 	text-align: center;
 }
 
-/* Form */
-#form-holder {
+/* Stripe Banner */
+#stripe-container {
 	width: 100%;
-	margin-left: -10px;
-	background: #fffff5;
-	height: 700px;
 	text-align: center;
+	background-color: none;
 }
 
-#signup {
-	width: 80%;
-	padding-top: 30px;
-	padding-left: 10%;
-	padding-right: 10%;
-	font-family: 'HelveticaNeue-UltraLight', Helvetica, sans-serif;
-	font-size: 30px;
-	font-weight: 200;
-}
-
-#signup table {
+#button1{
+	background-color: rgb(39, 170, 225);
+	width: 170px;
+	margin-top: -26px;
+	height: 50px;
 	float: center;
-}
-
-#signup p {
-	font-size: 16px;
-	color: black;
-}
-
-.left {
-	text-align: right;
-	font-size: 24px;
-}
-
-#signup input[type=text] {
-	background: #aaa4a2;
-	border: 0;
-	height: 35px;
-	width: 100%;
-	vertical-align: middle;
-	border-radius: 5px;
+	text-align: center;
 	font-family: 'HelveticaNeue-UltraLight', Helvetica, sans-serif;
-	color: white;
-	font-size: 24px;
-}
-
-#signup table {
-	border-spacing: 20px;
-}
-
-.placeholder {
-	color: white;
-	font-size: 24px;
-}
-
-#consent-hor-bar {
-	height: 35px;
-	color: white;
-	background: rgb(39, 170, 225);
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-}
-
-#consent {
-	margin-top: 0px;
-	padding: 10px 15px 10px 15px;
-	border-style: solid;
-	border-width: 5px;
-	border-color: rgb(39, 170, 225);
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
-}
-
-#sub {
-	background: rgb(39, 170, 225);
-	height: 40px;
-	width: 100px;
-	font-size: 14px;
-	font-family: 'HelveticaNeue-UltraLight', Helvetica, sans-serif;
+	font-size: 25px;
 	font-weight: 200;
 	border-radius: 10px;
 	-moz-border-radius: 10px;
-	-o-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	border-width: 0px;
-	color: white;
+	line-height: 50px;
+	color: black;
+	z-index: -1;
+	transition: background-color 0.3s ease;
+	-webkit-transition: background-color 0.3s ease;
+	-moz-transition: background-color 0.3s ease;
+	transition: color 0.3s ease;
+	-webkit-transition: color 0.3s ease;
+	-moz-transition: color 0.3s ease;
 }
 
-#sub:hover {
-	opacity: 0.8;
-	color: black;
+#button1:hover {
+	background-color: #0d3b4e;
+	color: white;
+	z-index: -1;
+}
+
+#stripe {
+	position: relative;
+	height: 7px;
+	background-color: rgb(39, 170, 225);
+	margin-left: -10px;
+	margin-right: -10px;
+	z-index: -2;
+	margin-top: -25px;
+}
+
+/* List of Events */
+#list-events {
+	margin-left: 10%;
+	margin-top: 50px;
+	margin-right: 10%;
+}
+
+#list-events h1 {
+	font-weight: 200;
+	font-family: 'HelveticaNeue-UltraLight', Helvetica, sans-serif;
+	font-size: 40px;
+}
+
+.odd-row {
+	background-color: rgb(39, 170, 225);
+	height: 50px;
+}
+
+.even-row {
+	background-color: #878281;
+	height: 50px;
+}
+
+#list-events table {
+	font-weight: 200;
+	font-family: 'HelveticaNeue-UltraLight', Helvetica, sans-serif;
+	font-size: 20px;
+	color: white;
+	border-spacing: 0px;
+}
+
+#list-events table td {
+	padding-left: 15px;
 }
 
 /* Footer */
@@ -259,6 +237,7 @@ footer {
 	padding-bottom: 10px;
 	padding-top: 20px;
 	position: relative;
+	top: 300px;
 	z-index: -1;
 }
 
